@@ -2,12 +2,12 @@
 This project allows me to automatically install my preferred packages, programs, dotfiles, and desktop customizations on Ubuntu. 
 
 It has been tested on fresh installations of:  
-`Ubuntu 20.04 LTS - GNOME desktop`  
-`Ubuntu 18.04 LTS - GNOME desktop`
+`Ubuntu 20.04 LTS - GNOME desktop`
 
 🙌 Much of the code and structure were taken and adapted from 🙌:  
 https://github.com/victoriadrake/dotfiles/  
 https://github.com/tomnomnom/dotfiles
+https://github.com/KurtKline/ubuntu-setup.git
 
 💡 For a simpler set-up without themes and other aesthetic non-essentials, use the `bare-bones` branch.  
 💡 `master` branch set-up took 13 minutes with my garbage 2.7 MB/s internet.
@@ -20,7 +20,7 @@ sudo apt install git
 
 Clone the project (e.g. in $HOME/Git/) 
 ```sh
-git clone https://github.com/KurtKline/ubuntu-setup.git
+git clone https://github.com/maltokyo/ubuntu-setup.git
 ```
 
 Grant execute permissions on bash scripts  

@@ -2,14 +2,16 @@
 
 echo "🖥️ Customizing Desktop & Gnome Preferences"
 
-# Installing Canta theme
-git clone https://github.com/vinceliuice/Canta-theme.git
-mkdir ~/.themes/; mv Canta-theme $_
-~/.themes/Canta-theme/install.sh -c dark -t standard -s standard
+# Installing Canta theme - zmalmark uncomment to use
+# git clone https://github.com/vinceliuice/Canta-theme.git
+# mkdir ~/.themes/; mv Canta-theme $_
+# ~/.themes/Canta-theme/install.sh -c dark -t standard -s standard
 
-# Installing Ant theme
-git clone https://github.com/EliverLara/Ant-Dracula.git
-mv Ant-Dracula ~/.themes/
+# Installing Ant theme - zmalmark uncomment to use - i edited this from original
+# git clone https://github.com/dracula/gtk.git
+# mv gtk ~/.themes/gtk-draculatheme
+# gsettings set org.gnome.desktop.interface gtk-theme "Dracula"
+# gsettings set org.gnome.desktop.wm.preferences theme "Dracula"
 
 function enable_extension {
     if [[ $(lsb_release -rs) == '18.04' ]]; then 
@@ -37,7 +39,8 @@ enable_extension hidetopbar@mathieu.bidon.ca
 # Enable user shell themes
 enable_extension user-theme@gnome-shell-extensions.gcampax.github.com
 
-gsettings set org.gnome.shell favorite-apps "['org.gnome.Nautilus.desktop', 'pycharm-community_pycharm-community.desktop', 'code_code.desktop', 'atom_atom.desktop', 'google-chrome.desktop', 'spotify_spotify.desktop', 'org.gnome.Terminal.desktop']"
+# zmalmark dont need pycharm: gsettings set org.gnome.shell favorite-apps "['org.gnome.Nautilus.desktop', 'pycharm-community_pycharm-community.desktop', 'code_code.desktop', 'atom_atom.desktop', 'google-chrome.desktop', 'spotify_spotify.desktop', 'org.gnome.Terminal.desktop']"
+gsettings set org.gnome.shell favorite-apps "['org.gnome.Nautilus.desktop', 'code_code.desktop', 'atom_atom.desktop', 'google-chrome.desktop', 'spotify_spotify.desktop', 'org.gnome.Terminal.desktop']"
 gsettings set org.gnome.desktop.lockdown disable-lock-screen true
 
 # Tweaks > Extensions
@@ -61,8 +64,9 @@ else
     icon_theme='Yaru'
 fi
 
-gsettings set org.gnome.desktop.interface gtk-theme 'Canta-dark' # Applications
+# zmalmark - commented out the canta theme lines as I try with no theme to start with:
+#gsettings set org.gnome.desktop.interface gtk-theme 'Canta-dark' # Applications
 gsettings set org.gnome.desktop.interface cursor-theme $cur_theme # Cursor
 gsettings set org.gnome.desktop.interface icon-theme $icon_theme # Icons
-gsettings set org.gnome.shell.extensions.user-theme name 'Canta-dark' # Shell
-gsettings set org.gnome.desktop.wm.preferences theme 'Canta-dark'
+#gsettings set org.gnome.shell.extensions.user-theme name 'Canta-dark' # Shell
+#gsettings set org.gnome.desktop.wm.preferences theme 'Canta-dark'

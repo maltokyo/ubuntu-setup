@@ -17,14 +17,14 @@ function install {
 
 install curl
 install git
-install vim
+# install vim
 install htop
 install tree
 install file
 install zsh
 
 # Aesthetic
-install fonts-powerline
+# for vim only: install fonts-powerline
 install gnome-tweaks
 install chrome-gnome-shell
 install gnome-shell-extensions

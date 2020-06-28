@@ -16,8 +16,8 @@ HISTCONTROL=ignoreboth
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=2000
+HISTSIZE=10000
+HISTFILESIZE=20000
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -142,14 +142,17 @@ gitBranch() {
 
 export PS1="${pathC}\w ${gitC}\$(gitBranch) ${pointerC}\$${normalC} "
 
-# Golang install or upgrade
-function getgolang () {
-    sudo rm -rf /usr/local/go
-    wget -q -P tmp/ https://dl.google.com/go/go"$@".linux-amd64.tar.gz
-    sudo tar -C /usr/local -xzf tmp/go"$@".linux-amd64.tar.gz
-    rm -rf tmp/
-    go version
-}
+# zmalmark start comment out, uncomment all this if I need go
 
-# Allows Go to work
-export PATH=$PATH:/usr/local/go/bin
+# Golang install or upgrade
+# function getgolang () {
+#     sudo rm -rf /usr/local/go
+#     wget -q -P tmp/ https://dl.google.com/go/go"$@".linux-amd64.tar.gz
+#     sudo tar -C /usr/local -xzf tmp/go"$@".linux-amd64.tar.gz
+#     rm -rf tmp/
+#     go version
+# }
+
+# # Allows Go to work
+# export PATH=$PATH:/usr/local/go/bin
+# zmalmark end comment out, uncomment all this if I need go

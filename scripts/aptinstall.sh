@@ -22,6 +22,7 @@ install htop
 install tree
 install file
 install zsh
+install davfs2
 
 # Aesthetic
 # for vim only: install fonts-powerline

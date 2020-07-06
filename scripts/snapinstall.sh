@@ -13,6 +13,7 @@ function install {
   fi
 }
 
+install keepassxc
 # install pycharm-community
 # install spotify
 # install atom # zmalmark this could be good to look at in future instead of sublime
